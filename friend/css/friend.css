@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/*
+    @filename : friend.css
+    @Author: 천준홍
+    @Description: 카카오톡 친구페이지 레이아웃 클론코딩 css 시트
+*/
+
+#header {
+    width: 485px;
+    height: 80px;
+    text-align: left;
+    position: relative;
+    padding-left : 13px;
+    padding-top: 10px;
+}
+
+#header h1 {
+    font-size : 30px;
+    padding-left: 5px;
+}
+#header ul {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#header ul li{
+    display: block;
+    float: right;
+}
+
+#header li:after {
+    content:'';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+#header ul li a {
+    display: block;
+    width: 45.75px;
+    height: 90px;
+    text-indent: -100000px;
+    overflow: hidden;
+    background: url(../img/header_menu.PNG) no-repeat;
+    cursor: pointer;
+}
+
+#header ul li a#icon4 {
+    background-position: 0px 0;
+}
+
+#header ul li a#icon3{
+    background-position: -45.75px 0;
+}
+
+#header ul li a#icon2{
+    background-position: -91.5px 0;
+}
+
+#header ul li a#icon1{
+    background-position: -132.25px 0;
+}
+
+#content {
+    width: 498px;
+    text-align: left;
+}
+
+#profile {
+    width:498px;
+    padding-left: 2px;
+    margin-top: -25px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+#birthday{
+    width: 498px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+#birth_head{
+    width: 483px;
+    position: relative;
+    font-size: 0.9em;
+    color:grey;
+    padding-left: 15px;
+    padding-top: 5px;
+    
+}
+
+#birth_head span{
+    position: absolute;
+    top: 0px;
+    right: 7px;
+}
+
+#birthday ul li a {
+    display: block;
+    width: 498px;
+    height: 70px;
+    text-indent: -100000px;
+    overflow: hidden;
+    background: url(../img/birth.PNG) no-repeat;
+    cursor: pointer;
+    
+}
+
+#birthday ul li a#birth_icon1 {
+    background-position: 0 0px;
+    
+}
+
+#birthday ul li a#birth_icon2{
+    background-position: 0 -70px;
+}
+
+#bookmark{
+    width: 498px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+#bookmark_head{
+    width: 483px;
+    position: relative;
+    font-size: 0.9em;
+    color:grey;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+#bookmark_head span{
+    position: absolute;
+    top: 0px;
+    right: 7px;
+}
+
+#bookmark ul li a {
+    display: block;
+    width: 498px;
+    height: 70.75px;
+    text-indent: -100000px;
+    overflow: hidden;
+    background: url(../img/bookmark.PNG) no-repeat;
+    cursor: pointer;
+}
+
+#bookmark ul li a#book_icon1 {
+    background-position: 0 0px;
+}
+
+#bookmark ul li a#book_icon2{
+    background-position: 0 -70.75px;
+}
+
+#bookmark ul li a#book_icon3 {
+    background-position: 0 -141.5px;
+}
+
+#bookmark ul li a#book_icon4{
+    background-position: 0 -212.25px;
+}
+
+#recommand{
+    width: 498px;
+}
+#recommand{
+    padding-left: 5px;
+    padding-top: 10px;
+}
+#recommand_head{
+    width: 483px;
+    position: relative;
+    font-size: 0.9em;
+    color:grey;
+    padding-left: 10px;
+}
+
+#recommand_head span{
+    position: absolute;
+    top: 0px;
+    right: 7px;
+}
+
+#recommand ul li a {
+    display: block;
+    width: 498px;
+    height: 76px;
+    text-indent: -100000px;
+    overflow: hidden;
+    background: url(../img/recommand.PNG) no-repeat;
+    cursor: pointer;
+}
+
+#recommand ul li a#book_icon1 {
+    background-position: 0 0px;
+}
+
+#footer {
+    width : 498px;
+    height: 90px;
+    border-top: 1px solid rgb(165, 165, 165)
+}
+
+#footer ul li{
+    width: 20%;
+    display: block;
+    float: left;
+}
+
+#content li:after {
+    content:'';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+#footer ul li a {
+    display: block;
+    width: auto;
+    height: 90px;
+    text-indent: -10000px;
+    overflow: hidden;
+    background: url(../img/footer_nav.PNG) no-repeat;
+    cursor: pointer;
+}
+
+#footer ul li a#foot_icon1 {
+    background-position: 0px 0;
+}
+
+#footer ul li a#foot_icon2{
+    background-position: -99.6px 0;
+}
+
+#footer ul li a#foot_icon3{
+    background-position: -199.2px 0;
+}
+
+#footer ul li a#foot_icon4{
+    background-position: -298.8px 0;
+}
+
+#footer ul li a#foot_icon5{
+    background-position: -398.4px 0;
+}

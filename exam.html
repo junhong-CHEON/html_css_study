@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CSS Example</title>
+  <style type="text/css">
+		/* 공통속성
+		----------------------------------------- */
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html, body {
+			height: 100%;
+		}
+
+		/* 전체박스 : 전체 레이아웃의 폭, 정렬을 제어하기 위한 박스
+		----------------------------------------- */
+		#container {
+			width: 800px;
+			margin: auto;
+      background-color: #ffffff;
+		}
+    #container a {
+            text-decoration: none;
+            color: #222;
+            font: 14px "굴림";
+    }
+
+
+		/* 상단 : 폭 = 부모값, 높이=고정
+		----------------------------------------- */
+		#header {
+			background-color: #e0d4e0;
+			width: auto;
+			height: 81px;
+      padding-top: 20px;
+		}
+
+    #header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #000000
+    }
+    #header li {
+        width: 20%;
+        display: inline-block;
+        text-align: center;
+    }
+    #header li > a {
+        /** 링크의 박스화 --> 하나의 목록 안을 전체 클릭 가능하게 한다. */
+        display: block;
+        padding: 10px 15px;
+        width: auto;
+        /** li에게 border를 지정할 경우 li의 총 넓이 합이 100%를 초과하므로,
+         *  레이아웃이 깨지게 된다.
+         *  링크는 width가 auto이므로, border를 주어도 전체 크기에 영향이 없다. */
+        border-left: 1px dotted #b9b5b5;
+    }
+    #header li:first-child a {
+        border-left: 0;
+    }
+    #header li a:hover {
+        background-color: #bdcabd;
+    }
+
+		/* 내용 : 폭 = 부모값, 높이=가변
+		----------------------------------------- */
+		#content {
+			background-color: #ffffff;
+			width: auto;
+			/** 페이지의 최소 높이가 브라우저의 높이를 가득 채우도록 처리 */
+			min-height: 300px;
+			/** for IE */
+			height: auto !important;
+			height: 300px;
+		}
+
+    a {
+      text-decoration: none;
+    }
+
+/* 모든 목록정의 초기화. - 여백은 6,7라인에서 제거했으므로 생략
+ * -------------------------------------- */
+    ul, ol {
+      list-style: none;
+    }
+
+/* 갤러리 영역 박스
+ * -------------------------------------- */
+    #gallery {
+      width: 640px;
+      margin: auto;
+    }
+
+/* 한 줄에 4개씩, 가로 배치
+ * -------------------------------------- */
+    #gallery li {
+      width: 25%;
+      float: left;
+    }
+
+/* 링크의 영역 확장 (공식)
+ * - 크기와 여백을 주기 위하여 block으로 설정 후, 가로 가득
+ * -------------------------------------- */
+    #gallery li a {
+      display: block;
+      width: auto;
+      padding: 10px;
+    }
+
+/* 링크 안의 span을 block으로 처리
+ * -------------------------------------- */
+    #gallery li a span {
+      display: block;
+      width: auto;
+    } 
+
+/* 이미지는 가득 채움
+ * -------------------------------------- */
+    #gallery .thumb img {
+      width: 100%;
+    }
+
+/* 텍스트 영역 처리
+ * -------------------------------------- */
+    #gallery .text {
+      width: 95%;
+      height: 30px;
+      margin: auto;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+
+/* 게시물의 마우스 오버
+ * -------------------------------------- */
+    #gallery li a:hover {
+      background-color: #eee;
+  }
+
+		/* 하단 : 폭 = 부모값, 높이=고정
+		----------------------------------------- */
+		#footer {
+			background-color: #e0d4e0;
+			width: auto;
+			height: 80px;
+      text-align: center;
+      border-top: 1px solid #000000;
+      padding-top: 20px;
+		}
+		
+		/* 내용 > 본문영역
+		----------------------------------------- */
+		#body {
+			width: 640px;
+			background-color: #ffffff;
+			float: left;
+			min-height: 300px;
+		}
+
+		/* 내용 > 사이드 바
+		----------------------------------------- */
+		#sidebar {
+			width: 140px;
+			background-color: #26ac8a;
+			float: left;
+			min-height: 100px;
+      padding : 10px 10px 10px 10px;
+		}
+    
+    #sidebar input {
+      border : None;
+      width : 140px;
+      outline : 0;
+      padding : 5px 0px 5px 5px;
+    }
+    .frm-login fieldset{
+      outline : 0;
+      border : 0;
+    }
+
+    .frm-login legend{
+      display: None;
+    }
+    .frm-login label {
+      color : #ffffff;
+      text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    }
+
+    .frm-login div {
+      padding-bottom: 10px;
+    }
+
+    .frm-login button{
+      width : 48%;
+      border : 0;
+      outline : 0;
+      padding : 5px 5px 5px 5px;
+    }
+		/* float 속성 해제
+		------------------------------------------ */
+		.clear:after {
+			content: '';
+			display: block;
+			clear: both;
+			float: none;
+		}
+	</style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1 class='title'>Hello World</h1>
+      <ul>
+		    <li> <a href="#">메일</a> </li><!--
+		    --><li> <a href="#">블로그</a> </li><!--
+		    --><li> <a href="#">카페</a> </li><!--
+		    --><li> <a href="#">쇼핑</a> </li><!--
+		    --><li> <a href="#">지식인</a> </li>
+		  </ul>
+    </div>
+    <div id="content" class="clear">
+      <div id="body">
+        <ul id="gallery">
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-01.jpg" alt="이미지1" /></span>
+              <span class="text">바다여행에서의 피부관리 노하우</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-02.jpg" alt="이미지2" /></span>
+              <span class="text">서울 시내 봄철 꽃 나들이 10선</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-03.jpg" alt="이미지3" /></span>
+              <span class="text">휴식을 위한 여행</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-04.jpg" alt="이미지4" /></span>
+              <span class="text">여행을 떠나기 전 체크사항</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-05.jpg" alt="이미지5" /></span>
+              <span class="text">친환경이 대세다! 자전거로 떠나는 여행</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-06.jpg" alt="이미지6" /></span>
+              <span class="text">야경이 아름다운 곳에서</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-07.jpg" alt="이미지7" /></span>
+              <span class="text">스마트한 결혼준비 2탄</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-08.jpg" alt="이미지8" /></span>
+              <span class="text">권태기가 올 줄은...</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-09.jpg" alt="이미지9" /></span>
+              <span class="text">특별한 날, 완벽준비 가이드</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-10.jpg" alt="이미지10" /></span>
+              <span class="text">추억의 사진 복원</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-11.jpg" alt="이미지11" /></span>
+              <span class="text">일이냐, 사랑이냐. 그것이 문제로다.</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="thumb"><img src="img/thumb-12.jpg" alt="이미지12" /></span>
+              <span class="text">흡연에 관한 서로의 진실</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="sidebar">
+        <form class='frm-login'>
+        	<fieldset>
+        		<legend>로그인</legend>
+        		<div>
+        			<label>아이디</label>
+        			<input type='text' name='user_id' placeholder='아이디를 입력하세요'/>
+        		</div>
+        		<div>
+        			<label>비밀번호</label>
+        			<input type='password' name='user_id' placeholder='비밀번호를 입력하세요'/>
+        		</div>
+        		<div>
+        			<button type="button">로그인</button>
+        			<button type="button">회원가입</button>
+        		</div>
+        	</fieldset>
+        </form>
+      </div>
+    </div>
+    <div id="footer">
+      <address>copyright&copy;2017. itpaper.co.kr</address>
+    </div>
+</div>
+</body>
+
+</html>

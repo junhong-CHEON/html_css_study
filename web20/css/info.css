@@ -1,0 +1,22 @@
+
+@charset "utf-8";
+
+#content {
+    background: #ffffff url(../img/info_bg.png) repeat-x;
+}
+
+#content h2{
+    width: 318PX;
+    height: 120px;
+    margin: auto;
+    background: url(../img/center.jpg) no-repeat;
+    color: rgba(red, green, blue, )
+}
+
+#content p {
+    width: 298px;
+    margin: auto;
+    padding: 0 10px 10px 10px;
+    font-size: 0.8em;
+    line-height: 150%;
+}
